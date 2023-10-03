@@ -25,8 +25,14 @@ describe 'Matchers de Comparação' do
 
   it 'be between exclusive' do
     expect(6).to be_between(2, 7).exclusive
-    expect(3).to be_between(2, 7).exclusive
-    expect(5).to be_between(2, 7).exclusive
+    expect(1).to be_between(2, 7).exclusive
+    expect(8).to be_between(2, 7).exclusive
+  end
+
+  it 'be between exclusive' do
+    expect(6).to be_between(2, 7).exclusive
+    expect(1).to be_between(2, 7).exclusive
+    expect(8).to be_between(2, 7).exclusive
   end
 
   it 'match' do
