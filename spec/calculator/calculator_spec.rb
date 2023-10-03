@@ -1,7 +1,15 @@
 require 'calculator'
 
-describe Calculator, 'Classe Calculadora' do
+RSpec.describe Calculator, 'Classe Calculadora' do
   subject(:calc) { Calculator.new }
+
+  context '#division' do
+    it 'divide by zero' do
+      expect{subject.division(3, 0)}.to raise_error(ZeroDivisionError)
+      expect{subject.division(3, 0)}.to raise_error(ZeroDivisionError, "divided by 0")
+      expect{subject.division(3, 0)}.to raise_error("divided by 0")
+    end
+  end
 
   context '#sum' do
     it 'with positive numbers' do
